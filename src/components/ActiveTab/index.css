@@ -1,0 +1,33 @@
+.active-slide-bg-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-slides/nxt-slides-bg.png');
+  background-size: cover;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.heading-input,
+.para-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+input {
+  text-align: center;
+}
+input:focus {
+  background-color: #dbeafe;
+}
+.heading-input {
+  color: #0967d2;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.para-input {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #334155;
+}

@@ -1,0 +1,38 @@
+.slide-li {
+  display: flex;
+  gap: 0.2rem;
+  padding: .5rem;
+  padding-left: 2rem;
+  border-radius: 0 8px 8px 0;
+}
+.slide-num {
+  align-self: flex-start;
+  margin: 0.5rem;
+  color: #475569;
+}
+.slide-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 150px;
+  height: 100px;
+  background-color: white;
+  box-shadow: 2px 2px 4px 2px rgb(0, 0, 0, 0.03);
+  padding: 1rem;
+  border-radius: 5px;
+}
+.slide-card-heading {
+  font-size: 1.2rem;
+  color: #0967d2;
+}
+.slide-card-para {
+  font-size: 0.8rem;
+  color: #334155;
+}
+
+.active-bg {
+  background-color: #dbeafe;
+}

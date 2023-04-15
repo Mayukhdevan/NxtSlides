@@ -14,12 +14,6 @@ const ActiveTab = ({
     eachSlide => eachSlide.id === activeSlideId,
   )
 
-  const toggleHeadingEditable = () =>
-    setHeadingEditable(prevState => !prevState)
-
-  const toggleDescriptionEditable = () =>
-    setDescriptionEditable(prevState => !prevState)
-
   const renderHeading = () =>
     headingEditable ? (
       <input
@@ -27,10 +21,10 @@ const ActiveTab = ({
         type="text"
         onChange={e => updateHeading(e.target.value)}
         value={heading}
-        onBlur={toggleHeadingEditable}
+        onBlur={() => setHeadingEditable(false)}
       />
     ) : (
-      <h1 className="heading-input" onClick={toggleHeadingEditable}>
+      <h1 className="heading-input" onClick={() => setHeadingEditable(true)}>
         {heading}
       </h1>
     )
@@ -42,10 +36,10 @@ const ActiveTab = ({
         type="text"
         onChange={e => updateDescription(e.target.value)}
         value={description}
-        onBlur={toggleDescriptionEditable}
+        onBlur={() => setDescriptionEditable(false)}
       />
     ) : (
-      <p className="para-input" onClick={toggleDescriptionEditable}>
+      <p className="para-input" onClick={() => setDescriptionEditable(true)}>
         {description}
       </p>
     )

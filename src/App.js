@@ -49,7 +49,7 @@ const initialSlidesList = [
 // Replace your code here
 const App = () => {
   const [slidesList, setSlidesList] = useState(initialSlidesList)
-  const [activeSlideId, setActiveSlideId] = useState(initialSlidesList[0].id
+  const [activeSlideId, setActiveSlideId] = useState(initialSlidesList[0].id)
 
   const updateHeading = value =>
     setSlidesList(prevSlidesList =>
@@ -85,13 +85,14 @@ const App = () => {
       newSlideList.splice(slideIndex + 1, 0, newSlide)
       return newSlideList
     })
+    setActiveSlideId(newSlide.id)
   }
 
   return (
     <div className="main-container">
       <Header />
       <div className="slides-container">
-        <TabContext.Provider value={setActiveSlideId}>
+        <TabContext.Provider value={{activeSlideId, setActiveSlideId}}>
           <SlideTabsList slidesList={slidesList} addNewSlide={addNewSlide} />
           <ActiveTab
             activeSlideId={activeSlideId}

@@ -1,0 +1,26 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.add-new-btn {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #dbeafe;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 0 0 1rem 0.5rem;
+}
+.plus-img {
+  width: 10px;
+}
+.slide-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}

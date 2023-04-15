@@ -2,15 +2,16 @@ import './index.css'
 import SlideTabItem from '../SlideTabItem'
 
 const SlideTabsList = ({slidesList, addNewSlide}) => (
-  <div>
+  <div className="sidebar">
     <button type="button" className="add-new-btn" onClick={() => addNewSlide()}>
       <img
+        className="plus-img"
         src="https://assets.ccbp.in/frontend/react-js/nxt-slides/nxt-slides-plus-icon.png"
         alt="new plus icon"
       />{' '}
       New
     </button>
-    <ul className="slide-ul">
+    <ol className="slide-ul">
       {slidesList.map(eachSlide => (
         <SlideTabItem
           key={eachSlide.id}
@@ -18,7 +19,7 @@ const SlideTabsList = ({slidesList, addNewSlide}) => (
           indexVal={slidesList.indexOf(eachSlide)}
         />
       ))}
-    </ul>
+    </ol>
   </div>
 )
 
